@@ -1,0 +1,9 @@
+{
+  "uuid": "venice-balance@mengine",
+  "name": "Venice Balance",
+  "description": "Shows your remaining Venice.ai credits (USD / DIEM) in the top panel.",
+  "shell-version": ["47", "48", "49", "50"],
+  "version": 1,
+  "settings-schema": "org.gnome.shell.extensions.venice-balance",
+  "url": "https://github.com/Mengine/gnome-extentions-venice-tracker"
+}

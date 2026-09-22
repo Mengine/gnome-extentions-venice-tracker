@@ -1,0 +1,13 @@
+.venice-balance-label {
+  font-weight: bold;
+}
+
+.venice-balance-error {
+  color: #f66151;
+}
+
+.venice-balance-header {
+  font-weight: bold;
+  color: #9a9996;
+  font-size: 0.9em;
+}

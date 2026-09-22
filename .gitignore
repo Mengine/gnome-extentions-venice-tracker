@@ -1,0 +1,11 @@
+# Compiled GSettings schema (regenerate with: glib-compile-schemas schemas/)
+schemas/gschemas.compiled
+
+# Packed extension archives
+*.shell-extension.zip
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+.DS_Store

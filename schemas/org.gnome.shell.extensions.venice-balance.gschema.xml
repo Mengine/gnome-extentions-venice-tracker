@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.venice-balance" path="/org/gnome/shell/extensions/venice-balance/">
+    <key name="api-base-url" type="s">
+      <default>"https://api.venice.ai/api/v1"</default>
+      <summary>API base URL</summary>
+      <description>Base URL of the Venice-compatible API. /api_keys/rate_limits and /billing/usage-history are appended to it.</description>
+    </key>
+    <key name="api-key" type="s">
+      <default>""</default>
+      <summary>Venice API key</summary>
+      <description>Bearer token used to query https://api.venice.ai/api/v1/api_keys/rate_limits</description>
+    </key>
+    <key name="refresh-interval" type="i">
+      <range min="30" max="86400"/>
+      <default>300</default>
+      <summary>Refresh interval (seconds)</summary>
+    </key>
+    <key name="show-diem" type="b">
+      <default>false</default>
+      <summary>Show DIEM balance in the panel label as well</summary>
+    </key>
+    <key name="decimals" type="i">
+      <range min="0" max="4"/>
+      <default>2</default>
+      <summary>Decimal places shown in the panel</summary>
+    </key>
+  </schema>
+</schemalist>
