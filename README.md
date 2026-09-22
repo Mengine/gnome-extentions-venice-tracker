@@ -34,18 +34,24 @@ Settings…
 
 ## Install
 
+The extension UUID has the form `venice-balance@<username>`. Replace `<username>`
+below with your own computer username (`echo $USER`). GNOME Shell requires the
+extension folder name to match the `uuid` field in `metadata.json` exactly, so
+set it there as well:
+
 ```bash
 git clone https://github.com/Mengine/gnome-extentions-venice-tracker.git
 cd gnome-extentions-venice-tracker
+sed -i "s/venice-balance@[^\"]*/venice-balance@$USER/" metadata.json
 glib-compile-schemas schemas/
-ln -s "$PWD" ~/.local/share/gnome-shell/extensions/venice-balance@mengine
+ln -s "$PWD" ~/.local/share/gnome-shell/extensions/venice-balance@$USER
 ```
 
 Log out and back in (Wayland can't hot-reload extensions), then:
 
 ```bash
-gnome-extensions enable venice-balance@mengine
-gnome-extensions prefs venice-balance@mengine   # paste your API key
+gnome-extensions enable venice-balance@$USER
+gnome-extensions prefs venice-balance@$USER   # paste your API key
 ```
 
 ## Settings

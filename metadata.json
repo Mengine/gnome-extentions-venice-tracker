@@ -1,5 +1,5 @@
 {
-  "uuid": "venice-balance@mengine",
+  "uuid": "venice-balance@username",
   "name": "Venice Balance",
   "description": "Shows your remaining Venice.ai credits (USD / DIEM) in the top panel.",
   "shell-version": ["47", "48", "49", "50"],
