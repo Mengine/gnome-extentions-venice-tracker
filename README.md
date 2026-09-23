@@ -47,12 +47,22 @@ glib-compile-schemas schemas/
 ln -s "$PWD" ~/.local/share/gnome-shell/extensions/venice-balance@$USER
 ```
 
-Log out and back in (Wayland can't hot-reload extensions), then:
+**Important:** GNOME Shell only scans the extensions directory when it starts, so
+the extension will not be visible yet. Running `gnome-extensions enable` at this
+point fails with `Extension "venice-balance@…" does not exist`.
+
+**Log out and log back in** (on Wayland the shell cannot be restarted in place),
+then:
 
 ```bash
 gnome-extensions enable venice-balance@$USER
 gnome-extensions prefs venice-balance@$USER   # paste your API key
 ```
+
+Verify it was picked up with `gnome-extensions list | grep venice`.
+
+Alternatively, on an X11 session you can restart the shell instead of logging
+out: press <kbd>Alt</kbd>+<kbd>F2</kbd>, type `r`, press <kbd>Enter</kbd>.
 
 ## Settings
 
