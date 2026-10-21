@@ -1,5 +1,12 @@
+/* Compact panel button: GNOME's default panel-button padding is ~8px per side */
+.venice-balance-button {
+  -natural-hpadding: 6px;
+  -minimum-hpadding: 4px;
+}
+
 .venice-balance-label {
   font-weight: bold;
+  font-size: 0.9em;
 }
 
 .venice-balance-error {

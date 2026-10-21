@@ -32,20 +32,14 @@ class VeniceIndicator extends PanelMenu.Button {
         this._timeoutId = null;
         this._cancellable = null;
 
-        // Panel widget: icon + label
-        const box = new St.BoxLayout({style_class: 'panel-status-menu-box'});
-        this._icon = new St.Icon({
-            gicon: Gio.icon_new_for_string(`${extension.path}/venice-symbolic.svg`),
-            style_class: 'system-status-icon',
-        });
+        // Panel widget: compact text-only label
+        this.add_style_class_name('venice-balance-button');
         this._label = new St.Label({
             text: '…',
             y_align: Clutter.ActorAlign.CENTER,
             style_class: 'venice-balance-label',
         });
-        box.add_child(this._icon);
-        box.add_child(this._label);
-        this.add_child(box);
+        this.add_child(this._label);
 
         // --- Popup menu: balance section
         this._addHeader('Balance');
